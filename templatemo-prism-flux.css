@@ -40,7 +40,6 @@ body {
 	font-family: 'Orbitron', 'Rajdhani', sans-serif;
 	background: var(--primary-black);
 	color: var(--text-primary);
-	overflow-x: hidden;
 	position: relative;
 }
 
@@ -372,6 +371,7 @@ body::after {
 	background: radial-gradient(ellipse at center,
 			rgba(153, 69, 255, 0.1) 0%,
 			transparent 50%);
+	overflow-x: hidden;
 }
 
 .carousel-container {
