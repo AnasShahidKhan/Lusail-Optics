@@ -23,43 +23,29 @@ https://templatemo.com/tm-600-prism-flux
                 id: 2,
                 title: 'Comprehensive Eye Exams',
                 description: 'We use the latest technology to ensure your prescription is perfect and your eyes are healthy.',
-                image: 'images/eye-exam.jpg', // We will add this image later
+                image: 'images/eye-exam.jpg',
                 tech: ['Health Check', 'Prescriptions']
             },
             {
                 id: 3,
-                title: 'Blockchain Vault',
-                description: 'Secure decentralized storage solution using advanced encryption and distributed ledger technology.',
-                image: 'images/blockchain-vault.jpg',
-                tech: ['Ethereum', 'Solidity', 'Web3']
+                title: 'Designer Brands',
+                description: 'Explore our curated collection of the latest styles from top international brands.',
+                image: 'images/designer-frames.jpg', // Placeholder image
+                tech: ['Ray-Ban', 'Gucci', 'Prada']
             },
             {
                 id: 4,
-                title: 'Cyber Defense',
-                description: 'Military-grade cybersecurity framework with real-time threat detection and automated response.',
-                image: 'images/cyber-defense.jpg',
-                tech: ['Zero Trust', 'AI Defense', 'Encryption']
+                title: 'Contact Lenses',
+                description: 'We offer a full range of contact lenses, including dailies, monthlies, and specialty lenses.',
+                image: 'images/contact-lenses.jpg', // Placeholder image
+                tech: ['Dailies', 'Monthlies', 'Toric']
             },
             {
                 id: 5,
-                title: 'Data Nexus',
-                description: 'Big data processing platform capable of analyzing petabytes of information in real-time.',
-                image: 'images/data-nexus.jpg',
-                tech: ['Apache Spark', 'Hadoop', 'Kafka']
-            },
-            {
-                id: 6,
-                title: 'AR Interface',
-                description: 'Augmented reality system for immersive data visualization and interactive experiences.',
-                image: 'images/ar-interface.jpg',
-                tech: ['Unity', 'ARCore', 'Computer Vision']
-            },
-            {
-                id: 7,
-                title: 'IoT Matrix',
-                description: 'Intelligent IoT ecosystem connecting millions of devices with edge computing capabilities.',
-                image: 'images/iot-matrix.jpg',
-                tech: ['MQTT', 'Edge AI', '5G']
+                title: 'Prescription Sunglasses',
+                description: 'Protect your eyes with style. We can add your prescription to almost any pair of sunglasses.',
+                image: 'images/sunglasses.jpg', // Placeholder image
+                tech: ['UV Protection', 'Polarized', 'Prescription']
             }
         ];
 
@@ -356,22 +342,6 @@ https://templatemo.com/tm-600-prism-flux
             observer.observe(statsSection);
         }
 
-        // Form submission
-        const contactForm = document.getElementById('contactForm');
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            
-            // Get form data
-            const formData = new FormData(contactForm);
-            const data = Object.fromEntries(formData);
-            
-            // Show success message
-            alert(`Thank you ${data.name}! Your message has been transmitted successfully. We'll respond within 24 hours.`);
-            
-            // Reset form
-            contactForm.reset();
-        });
-
         // Loading screen
         window.addEventListener('load', () => {
             setTimeout(() => {
@@ -388,3 +358,10 @@ https://templatemo.com/tm-600-prism-flux
                 parallax.style.transform = `translateY(${scrolled * 0.5}px)`;
             }
         });
+
+        window.addEventListener('pageshow', function(event) {
+        // Check if the page was loaded from the back-forward cache
+        if (event.persisted) {
+            document.getElementById('contactForm').reset();
+        }
+        }); 

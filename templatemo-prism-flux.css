@@ -393,7 +393,7 @@ body::after {
 .carousel-item {
 	position: absolute;
 	width: 400px;
-	height: 500px;
+	min-height: 500px;
 	left: 50%;
 	top: 50%;
 	transform-style: preserve-3d;
@@ -1452,8 +1452,8 @@ a.info-item {
 /* Responsive Design */
 @media (max-width: 1024px) {
 	.carousel-item {
-		width: 350px;
-		height: 480px;
+		min-width: 350px;
+		min-height: 480px;
 	}
 
 	.carousel-controls {
